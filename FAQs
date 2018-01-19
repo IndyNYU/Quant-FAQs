@@ -1,0 +1,140 @@
+Q1. What is the different types of Mathematics found in Quantitative Finance?
+A1. The fields of mathematics most used in quantitative finance are those of probability theory,
+    and differential equations. And, of course, numerical methods are usually needed for producing numbers.
+    
+    Here is a list of the various approaches to modelling and a selection of useful tools.
+    The distinction between a 'modelling approach' and a 'tool' will start to become clear.
+    
+    Modelling approaches:
+    1. Probabilistic
+    2. Deterministic
+    3. Discrete: difference equations
+    4. Continuous: differential equations
+    
+    Useful tools:
+    1. Simulations
+    2. Approximations
+    3. Asymptotic analysis
+    4. Series Solutions
+    5. Discretization methods
+    6. Green's Function
+    
+Q2. What is Arbitrage?
+A2. Arbitrage is making a sure profit in excess of the risk-free rate of return. In the language
+    of quantiative finance we can say an arbitrage opportunity is a portfolio of zero value today
+    which is of positive value in the future with positive probability and of negative value in
+    the future with zero probability.
+    
+    The assumption that there are no arbitrage opportunities in the market is fundamental to 
+    classical finance theory. This idea is popularly known as 'there's no such thing as free lunch.
+    
+    There are several types of arbitrage that we can think of. Here is a list and description
+    of most important.
+    
+    1. Static arbitrage: an arbitrage that does not require rebalancing of positions.
+    2. Dynamic arbitrage: an arbitrage that requires trading instruments in the future, generally
+                          contingent on market states.
+    3. Statistical arbitrage: It's simply a likely profit in excess of the risk-free return as
+                              predicted by past statistics.
+    4. Model-independent arbitrage: an arbitrage which does not depend on any mathematical model
+                                    of financial instruments to work. For example, an exploitable
+                                    violation of put-call parity or a violation of the relationship
+                                    between spot and forward prices or between bonds and swaps.
+                                    
+    Some reasons for not implementing strategies:
+    1. Ouoted prices are wrong or not tradable.
+    2. Option and stock prices were not quoted synchronously.
+    3. There is a bid-offer spread you have not accounted for.
+    4. Your model is wrong, or there is a risk factor you have not accounted for.
+    
+Q3. What is put-call parity?
+A3. Put-call parity is a relationship between the prices of a European-style call option and a European-style
+    put option, as long as they have the same strike and expiration.
+    
+    Call Price - Put Price = Stock Price - Strike Price(present valued from expiration)
+    C - P = S - Ke^(-r(T-t))
+    
+    In terms of the implied volatility, calls and puts with the same strike and expiration must have the 
+    same implied volatility. The beauty of put-call parity is that it is a model-independent relationship.
+    To value a call on its own we need a model for the stock price, in particular its volatility. The same
+    is true for valuing a put.
+    
+    In practice options don't have a single price, they have two prices, a bid and an offer(a ask). This means
+    that when you looking for violations of put-call parity you must use bid(offer) if you are going to short
+    (long) the options. This makes the calculations a little bit messier. If you think in terms of implied
+    volatility then it's much easier to spot violations of put-call parity. You must look for non-overlapping
+    implied volatility ranges. For example, suppose that the bid/offer on a call is 22%/25% in implied volatility
+    terms and that on a put (same strike and expiration) is 21%/23%. There is an overlap between these two ranges
+    and so no arbitrage opportunity. However, if the put prices were 19%/21% then there would be a violation of
+    put-call parity and hence an easy arbitrage opportunity. Don't expect to find many of such simple free-money
+    opportunities in practice though.
+
+Q4: What is the Central Limit Theorem and what are its implication for Finance?
+A4: The distribution of the average of a lot of random numbers will be normal (also known as Guassian) even when
+    the individual numbers are not normally distributed.
+    
+    In finance we often assume that equity returns are normally distribtued. We could argue that this ought to be
+    the case by saying that returns over any finite period, one day, say, are made up of many, many trades over
+    smaller time periods, with the result that the returns over the finite timescale are normal thanks to the
+    Central Limit Theorem. The same argument in exchange rates, or interest rates, or risk of default, etc. We
+    find ourselves using the normal distribution quite naturally for many financial processes.
+    
+    As often with mathematical 'laws' there is the 'legal' samll print, in this case the conditions under which
+    the Central Limit Theorem applies.
+      1. The random numbers must all be drawn from the same distribution.
+      2. The draws must all be independent.
+      3. The distribution must have finite mean and standard deviation.
+    
+    Think in terms of logarithms of the random numbers.
+    Logarithms of random numbers are themselves random(with logarithms of strictly positive numbers). So if you
+    add up lots of logarithms of random numbers you will get a normal distribution. But, of course, a sum of 
+    logarithms is just the logarithm of a product, therefore the logarithm of the product must be normal, and
+    this is the definition of lognormal, the product of positive random numbers converges to lognormal.
+    
+    This is important in finance because a stock price after a long period can be thought of as its value on some
+    starting day multiplied by lots of as its value on some starting day multiplied by lots of random numbers,
+    each representing a random return. So whatever the distribution of returns is, the logarithm of the stock
+    price will be normally distributed. We tend to assume that equity returns are normally distributed, and
+    equivalently, equities themselves are lognormally distributed.
+    
+Q5: How is Risk defiend in mathematical terms?
+A5: In finance, risk refers to the possibility of a monetary loss associated with investments.
+
+    The most common measure of risk is simply standard deviation of portfolio returns. The higher this is,
+    the more randomness in a portfolio, and this is seen as a bad thing.
+    
+    Financial risk comes in many forms:
+    (1) Market Risk: The possibility of loss due to movements in the market, either as a whole or a specific
+                     investments.
+    (2) Credit Risk: The possibility of loss due to default on a financial obligation.
+    (3) Model Risk: The possibility of loss due to errors in mathematical models, often models of derivatives.
+                    Since these models contain parameters, such as volatility, we can also speak of parameter
+                    risk, volatility risk, etc.
+    (4) Operational Risk: The possibility of loss due to people, procedures or systems. This includes human
+                          error and fraud.
+    (5) Legal Risk: The possibility of loss due to legal action or the meaning of legal contracts.
+    
+    Understand the difference between risk randomness and uncertainty all of which are important.
+    In finance we tend to concentrate on risk with probabilities we estimate, we then have all the tools of
+    statistics and probability for quantifying various aspects of that risk. In some financial models we do
+    attempt to address the uncertain. For example, the uncertain volatility work of a stock. Here volatility
+    is uncertain, is allowed to lie within a specified range, but the probability
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
