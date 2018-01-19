@@ -118,7 +118,32 @@ A5: In finance, risk refers to the possibility of a monetary loss associated wit
     In finance we tend to concentrate on risk with probabilities we estimate, we then have all the tools of
     statistics and probability for quantifying various aspects of that risk. In some financial models we do
     attempt to address the uncertain. For example, the uncertain volatility work of a stock. Here volatility
-    is uncertain, is allowed to lie within a specified range, but the probability
+    is uncertain, is allowed to lie within a specified range, but the probability of volatility having any
+    value is not given. Instead of working with probabilities we now work with worst-case scenarios. Uncertainty
+    is therefore more associated with the idea of stress testing portfolios. CrashMetrics is another example of
+    worst-case scenarios and uncertainty.
+    
+    A starting point for a mathematical definition of risk is simply as standard deviation. This is because of the
+    results of the Central Limit Theorem(CLT). The normal distribution being symmetrical about the mean, the potential
+    downside can be measured in terms of the standard deviation.
+    
+    However, this is only meaningful if the conditions for the CLT are satisfied. For example, if we only have a small
+    number of investments, or if the investments are correlated, or if they don't have finite variance, then standard
+    deviation may not be relevant.
+    
+    Another mathematical definition of risk is semi variance, in which only downside deviations are used in the calculation.
+    This definition is used in the Sortino performance measure.
+    
+Q6: What is Value at Risk and How is it used?
+A6: Value at Risk, or VaR for short, is a measure of the amount that could be lost from a position, portfolio, desk, bank, etc.
+    VaR is generally understood to mean the maximum loss an investment could incur at a given confidence level over a specified
+    time horizon. There are other risk measures used in practice but this is the simplest and most common.
+    
+    VaR calculations often assume that returns are normally distributed over the time horizon of interest. Inputs for a VaR
+    calculation will include details of the portfolio composition, the time horizon, and parameters governing the distribution
+    of the underlyings. The latter set of parameters includes average growth rate, standard deviations(volatilities) and correlations.
+    If the time horizon is short you can ignore the growth rate, as it will only have a small effect on the final calculation.
+    
     
 
 
