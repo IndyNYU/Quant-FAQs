@@ -144,6 +144,138 @@ A6: Value at Risk, or VaR for short, is a measure of the amount that could be lo
     of the underlyings. The latter set of parameters includes average growth rate, standard deviations(volatilities) and correlations.
     If the time horizon is short you can ignore the growth rate, as it will only have a small effect on the final calculation.
     
+Q7: What is CrashMetrics?
+A7:
+
+Q8: What is a Coherent Risk Measure and what are its properties?
+A8:
+
+Q9: What is Modern Portfolio Thoery?
+A9:
+
+Q10: What is the Capital Asset Pricing Model?
+A10: 
+
+Q11: What is Arbitrage Pricing Theory?
+A11:
+
+Q12: What is Maximum Likelihood Estimation?
+A12:
+
+Q13: What is Cointegration?
+A13:
+
+Q14: What is the Kelly criterion?
+A14:
+
+Q15: Why hedge?
+A15:
+
+Q16: What is Marking to market and how does it affect risk management in derivatives trading?
+A16:
+
+Q17: What is the Efficient Markets Hypothesis?
+A17:
+
+Q18: What are the most useful performance measures?
+A18:
+
+Q19: What is a utility function and how is it used?
+A19:
+
+Q20: What is Brownian Motion and what are its uses in Finance?
+A20:
+
+Q21: What is Jensen's Inequality and what is its role in finance?
+A21:
+
+Q22: What is Ito's Lemma?
+A22:
+
+Q23: What does risk-neutral valuation work?
+A23:
+
+Q24: What is Girsanov's Theorem, and why is it important in Finance?
+A24:
+
+Q25: What are the Greeks?
+A25:
+
+Q26: Why do quants like closed-form solutions?
+A26:
+
+Q27: What are the forward and backward equations?
+A27:
+
+Q28: Which Numerical Methods should I use and when?
+A28:
+
+Q29: What is Monte Carlo Simulation?
+A29: 
+
+Q30: What is the Finite-Difference Methods?
+A30: 
+
+Q31: What is a Jump-Diffusion Model and how does it affect option values?
+A31:
+
+Q32: What is meant by "Complete" and "Incomplete" markets?
+A32:
+
+Q33: What is volatility?
+A33: 
+
+Q34: What is the volatility smile?
+A34: 
+
+Q35: What is GARCH?
+A35:
+
+Q36: How do I dynamically hedge?
+A36:
+
+Q37: What is Dispersion Trading?
+A37:
+
+Q38: What is Bootstrapping using discount factors?
+A38:
+
+Q39: What is the LIBOR market model and its principal applications in Finance?
+A39:
+
+Q40: What is menat by the 'Value' of a contract?
+A40:
+
+Q41: What is calibration?
+A41:
+
+Q42: What if the Market pricie of Risk?
+A42:
+
+Q43: What is the difference between the equilibrium approach and the non-arbitrage
+     approach to modelling?
+A43: 
+
+Q44: How good is the assumption of Normal Distributions of Financial Returns?
+A44: 
+
+Q45: How robust is the Black-Scholes model?
+A45: 
+
+Q46: Why is the lognormal distribution important?
+A46: 
+
+Q47: What are copulas and how are they used in Quantitative Finance?
+A47: 
+
+Q48: What is Asymptotic Analysis and How is it used in Financial Modelling?
+A48: 
+
+Q49: What is a free-boundary problem and what is the optimal-stopping time for an Ameircan Option?
+A49: 
+
+Q50: What are low discrepancy numbers?
+A50: 
     
 
 
