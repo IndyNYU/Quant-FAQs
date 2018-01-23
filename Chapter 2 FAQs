@@ -209,8 +209,50 @@ Q17: What is the Efficient Markets Hypothesis?
 A17:
 
 Q18: What are the most useful performance measures?
-A18:
-
+A18: Performance measures are used to quantify the results of a trading strategy.
+     They are usually adjusted for risk. The most popular is the Sharpe Ratio.
+     
+     Performance measures are used to determine how successful an investment strategy has been.
+     When a hedge fund or trader is asked about past performance the first question is usually "What was your return?"
+     Later maybe "What was your worst month?" These are both very simple measures of performance.
+     The more sensible measures of performance make allowance for the risk that has been taken,
+     since a high return with low risk is much better than a high return with a lot of risk.
+     
+     (1) Sharpe Ratio: The Sharpe Ratio is probably the most important non-trivial risk-adjusted performance measure.
+                       It is calculated as Sharpe Ratio = (μ - r) / σ, where μ is the return on the strategy over some
+                       specified period, r is the risk-free rate over that periodm and σ is the standard deviation of returns.
+                       The Sharpe Ratio will be quoted in annualized terms. A high Sharpe ratio is intended to be a sign of
+                       a good strategy. If returns are normally distributed then the Sharpe ratio is related to the probability
+                       of making a return in excess of the risk-free rate. In the expected return versus risk diagram of MPT,
+                       the Sharpe ratio is the slope of the line joining each investment to the risk-free investment. Choosing the
+                       portfolio that maximizes the Sharpe ratio will give you the Market Portfolio. We also know from the Central
+                       Limit Theorem that if you have many different investments all that matters is the mean and the standard deviation.
+                       So as long as the CLT is valid the Sharpe ratio makes sense.
+                       The Sharpe ratio has been criticized for attaching equal weight to upside risk as downside risk since the
+                       standard deviation incorporates both in its calculation. This may be important if returns are skewed.
+                       
+     (2) Modigliani-Modigliani Measure: M2 measure is a simple linear transformation of the Sharpe ratio:
+                                        M2 = r + v * Sharpe Ratio
+                                        where v is the standard deviation of returns of the relevant benchmark.
+                                        This is easiliy interpreted as the return you would expect from your portfolio if it were
+                                        leveraged to have the same volatility as the benchmark.
+     
+     (3) Sortino Ratio: The Sortino Ratio is calculated in the same way as the Sharpe ratio expect that it uses the square root of
+                        the semi-variance as the denominator measuring risk. The semi variance is measured in the same way as the
+                        variance except that all data data points with positive return are replaced with zero, or with some target
+                        value.
+                        This measure ignores upside risk completely. However, if returns are expected to be normally distributed the
+                        semi variance will be statistically noisier than variance because fewer data points are used in its calculation.
+                        
+     (4) Treynor Ratio: The Treynor or Reward-to-variablility Ratio is another Sharpe-like measure, but now the denominator is the
+                        systematic risk, measured by the portfolio's beta.
+                        In a well-diversified portfolio Sharpe and Treynor are similar, but Treynor is more relevant for less
+                        diversified portfolios or individual stocks.
+     
+     (5) Information Ratio: The information ratio is a different type of performance measure in that it uses the idea of tracking
+                            error. The numerator is the return in excess of a benchmark again, but the denominator is the standard
+                            deviation of the differences between the portfolio returns and the benchmark returns
+                            This ratio gives a measure of the value added by a manager relative to their benchmark.
 Q19: What is a utility function and how is it used?
 A19:
 
