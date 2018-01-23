@@ -163,8 +163,39 @@ Q12: What is Maximum Likelihood Estimation?
 A12:
 
 Q13: What is Cointegration?
-A13:
-
+A13: Two time series are cointegrated if a linear combination has constant mean and standard deviation.
+     In other words, the two series never stray too far from one another.
+     Cointegrations is a useful technique for studying relationships in multivariate time series,
+     and provides a sound methodology for modelling both long-run and short-run dynamics in a financial system.
+     This can be the basis for pairs trading.
+     
+     The correlations between financial quantities are notoriously unstable.
+     Nevertheless correlations are regularly used in almost all multivariate financial problems.
+     An alternative statistical measure to correlation is conintegration.
+     This is probably a more robust measure of the linkage between two financial quantities 
+     but as yet there is little derivative theory on the concept.
+     Two stocks may be perfectly correlated over short timescales yet diverge in the long run,
+     with one growing and the other decaying.
+     Conversely, two stocks may follow each other, never being more than a certain distance apart,
+     but with any correlation, positive, negative or varying.
+     If we are delta hedging then maybe the short timescale correlation matters, 
+     but not if we are holding stocks for a long time in an unhedged portfolio.
+     To see whether two stocks stay close together we need a definition of stationarity.
+     A time series is stationary if it has finite and constant mean, standard deviation and autocorrelation function.
+     In a sense, stationary series do not wander too far from their mean.
+     Testing for the stationarity of a time series Xt involves a linear regression to find the coefficient a, b and c in
+     Xt = aXt-1 + b + ct.
+     If it is found that |a| > 1 then the series is unstable. If -1 <= a < 1 then the series is stationary.
+     If a = 1 then the series is non stationary. As with all things statistical, we can only say that our value for a is accurate
+     with a certain degree of confidence. To decide whether we have got a stationary or non-stationary series requires us to look
+     at the Dickey-Fuller statistic to estimate the degree of confidence in our result.
+     So far, so good, but from this point on the subject of conintegration gets complicated.
+     
+     How is this useful in finance?
+     Even though individual stock prices might be non stationary it is possible for a linear combination(i.e., a portfolio) to be
+     stationary. Can we find λi, with Σ{i = 1 to N}λi = 1 is stationary?
+     If we can, then we say that the stocks are cointegrated.
+     
 Q14: What is the Kelly criterion?
 A14:
 
